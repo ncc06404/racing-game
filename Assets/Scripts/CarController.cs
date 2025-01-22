@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class CarController : MonoBehaviour
 {
@@ -8,6 +9,11 @@ public class CarController : MonoBehaviour
     private float maxX = 8f;
 
     void Update()
+    {
+        TouchMove();
+    }
+
+    private void TouchMove()
     {
         if (Input.touchCount > 0)
         {
@@ -47,4 +53,5 @@ public class CarController : MonoBehaviour
         newX = Mathf.Clamp(newX, minX, maxX);
         transform.position = new Vector3(newX, transform.position.y, transform.position.z);
     }
+    
 }

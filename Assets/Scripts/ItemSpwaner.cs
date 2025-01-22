@@ -49,9 +49,10 @@ public class ItemSpwaner : MonoBehaviour
 
             if (itemSpwaner.transform.position.z <= -30f)
             {
-                Debug.Log("Itemtest");
+                //Debug.Log("Itemtest");
                 itemSpwaner.transform.position = new Vector3(itemSpwaner.transform.position.x, itemSpwaner.transform.position.y, 60f);
                 SetRandomGas();
+                gas.SetActive(true);
             }
         
     }
